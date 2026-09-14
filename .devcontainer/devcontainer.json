@@ -5,7 +5,7 @@
 	"remoteUser": "theia",
 	"workspaceFolder": "/project",
     "workspaceMount": "source=${localWorkspaceFolder},target=/project,type=bind,consistency=delegated",
-    "runArgs": ["-h","theia"],
+    "runArgs": ["-h","theia","--network","host"],
     "remoteEnv": {
       "FLASK_DEBUG": "true",
       "FLASK_APP": "service:app",
@@ -34,8 +34,5 @@
 			]
 		}
 	},
-	// "postCreateCommand": "sudo pip install -r requirements.txt",
-	"features": {
-		"docker-in-docker": "latest"
-	}
+	// "postCreateCommand": "sudo pip install -r requirements.txt"
 }
