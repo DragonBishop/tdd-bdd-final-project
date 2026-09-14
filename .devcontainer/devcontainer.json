@@ -5,7 +5,7 @@
 	"remoteUser": "theia",
 	"workspaceFolder": "/project",
     "workspaceMount": "source=${localWorkspaceFolder},target=/project,type=bind,consistency=delegated",
-    "runArgs": ["-h","theia","--network","host"],
+    "runArgs": ["-h","theia","--network","host","--add-host","theia:127.0.0.1"],
     "remoteEnv": {
       "FLASK_DEBUG": "true",
       "FLASK_APP": "service:app",
