@@ -1,4 +1,5 @@
 {
+    "python.defaultInterpreterPath": "/home/theia/venv/bin/python",
     "makefile.extensionOutputFolder": "./.vscode",
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": true,

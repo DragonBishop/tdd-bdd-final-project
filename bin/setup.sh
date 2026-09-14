@@ -30,7 +30,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get install -y sqlite3 ca-certificates p
 echo "*** Installing Google Chrome (Ubuntu's chromium-driver package needs a snap, which"
 echo "*** doesn't work in a plain container, so we install Google's real .deb build instead)"
 wget -q -O /tmp/google-chrome-signing-key.pub https://dl.google.com/linux/linux_signing_key.pub
-sudo gpg --dearmor -o /usr/share/keyrings/google-chrome.gpg /tmp/google-chrome-signing-key.pub
+sudo gpg --yes --dearmor -o /usr/share/keyrings/google-chrome.gpg /tmp/google-chrome-signing-key.pub
 echo "deb [arch=amd64 signed-by=/usr/share/keyrings/google-chrome.gpg] http://dl.google.com/linux/chrome/deb/ stable main" | \
     sudo tee /etc/apt/sources.list.d/google-chrome.list
 sudo apt-get update
